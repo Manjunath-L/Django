@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <p>Please fill out the form below and we will get back to you shortly.</p>
+
+    <!-- Contact Form -->
+    <form
+      action="mailto:your-email@example.com"
+      method="post"
+      enctype="text/plain"
+    >
+      <!-- Name Field -->
+      <label for="name">Full Name:</label><br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+      /><br /><br />
+
+      <!-- Email Field -->
+      <label for="email">Email Address:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      /><br /><br />
+
+      <!-- Subject Field -->
+      <label for="subject">Subject:</label><br />
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Subject"
+        required
+      /><br /><br />
+
+      <!-- Message Field -->
+      <label for="message">Message:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Write your message here..."
+        required
+      ></textarea
+      ><br /><br />
+
+      <!-- Submit Button -->
+      <input type="submit" value="Send" />
+      <input type="reset" value="Clear" />
+    </form>
+  </body>
+</html>

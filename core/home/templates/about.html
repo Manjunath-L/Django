@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background: #f9f9f9;
+        color: #333;
+      }
+      header {
+        background: #2e8b57;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+      section.about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 40px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .about img {
+        width: 350px;
+        border-radius: 10px;
+        margin-right: 30px;
+      }
+      .about-text {
+        flex: 1;
+      }
+      .about-text h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      .about-text h3 {
+        color: #2e8b57;
+        margin-bottom: 20px;
+      }
+      .about-text p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .btn {
+        background: #2e8b57;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+      .btn:hover {
+        background: #246b45;
+      }
+      footer {
+        background: #2e8b57;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+      }
+      @media (max-width: 768px) {
+        section.about {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about img {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Our Company</h2>
+    </header>
+    <section class="about">
+      <img src="https://via.placeholder.com/350x250" alt="About Image" />
+      <div class="about-text">
+        <h1>About Us</h1>
+        <h3>Innovators & Problem Solvers</h3>
+        <p>
+          We are a passionate team dedicated to delivering high-quality
+          solutions that empower businesses and individuals. Our mission is to
+          combine creativity with technology to create impactful experiences.
+        </p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+    </section>
+    <footer>© 2024 Our Company. All rights reserved</footer>
+  </body>
+</html>
