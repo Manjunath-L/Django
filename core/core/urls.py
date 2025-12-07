@@ -21,6 +21,8 @@ from home.views import *
 
 urlpatterns = [
     path("", index, name="index"),
+    path("<int:id>/<str:name>/", dynamic_url, name="dynamic_url"),
+    path("", index, name="index"),
     path("admin/", admin.site.urls),
     path("about-us/", about, name="about"),
     path("contact/", contact, name="contact"),
