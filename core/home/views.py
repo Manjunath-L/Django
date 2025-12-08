@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse, request
 from django.views import View
+import random
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, "index.html")
+    lucky_num = random.randint(100, 999)
+    context = {"lucky_num": lucky_num}
+    return render(request, "index.html", context)
 
 
 def about(request):
