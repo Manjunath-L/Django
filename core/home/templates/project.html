@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block start %}
+
+<div class="container mt-5">
+  <h2 class="text-center">Guess the Lucky number 🎲</h2>
+
+  <form action="#">
+    <div class="form-group col-md-5 mx-auto">
+      <label for="">Hope you win !!</label>
+      <input
+        class="form-control mt-1"
+        placeholder="Guess the number"
+        id="input"
+      />
+    </div>
+
+    <div class="text-center mt-5">
+      <button class="btn btn-success" onclick="chechluck()" type="button">
+        Check now
+      </button>
+    </div>
+  </form>
+</div>
+
+<script>
+  let lucky_num = "{{lucky_num}}";
+  let count = 5;
+  function chechluck() {
+    let input = document.getElementById("input");
+    if (input == "") {
+      alert("invalid input");
+    }
+    count += 1;
+    if (count <= 0) {
+      alert("You have exhausted the counts");
+      return;
+    }
+    if (lucky_num == input.value) {
+      alert("WOW!! you won");
+      window.location.reload();
+      return;
+    } else if (lucky_num > input.value) {
+      alert(`Sorry, your guess is too small \n Try again ${count} times`);
+      input.value = "";
+      return;
+    } else if (lucky_num < input.value) {
+      alert(`Sorry, your guess is too big \n Try again ${count} times`);
+      input.value = "";
+      return;
+    }
+  }
+</script>
+{% endblock %}
