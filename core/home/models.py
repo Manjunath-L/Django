@@ -1,8 +1,13 @@
 from django.db import models
+from django.forms import IntegerField
 
+
+class Department(models.Model):
+    department_name = models.CharField(max_length=100)
 
 # Create your models here.
 class Student(models.Model):
+    department = models.ForeignKey(Department, models.SET_NULL,models.CASCADE,models.SET_DEFAULT,models.PROTECT)
     name = models.CharField(max_length=100)
     age = models.IntegerField()
     gender = models.CharField(
@@ -20,3 +25,5 @@ class Student(models.Model):
     update_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField()
     uid = models.UUIDField()
+
+
